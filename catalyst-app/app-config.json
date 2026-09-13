@@ -1,0 +1,12 @@
+{
+  "stack": "nodejs",
+  "command": "npm start",
+  "memory": 512,
+  "env_variables": {
+    "MR_ONE_MODE": "zoho-first",
+    "AI_PROVIDER": "zoho",
+    "PUBLISH_PROVIDER": "zoho",
+    "STORAGE_PROVIDER": "zoho",
+    "DATABASE_PROVIDER": "zoho"
+  }
+}
