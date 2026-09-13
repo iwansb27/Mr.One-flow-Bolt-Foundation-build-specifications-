@@ -159,7 +159,7 @@ app.delete('/api/jobs/:id', async (req, res) => {
 
 const dist = path.join(root, 'dist');
 app.use(express.static(dist));
-app.get('*', (_req, res) => res.sendFile(path.join(dist, 'index.html')));
+app.get(/.*/, (_req, res) => res.sendFile(path.join(dist, 'index.html')));
 
 const port = Number(process.env.X_ZOHO_CATALYST_LISTEN_PORT || process.env.PORT || 9000);
 app.listen(port, () => console.log(`MR.ONE Catalyst app listening on ${port}`));
