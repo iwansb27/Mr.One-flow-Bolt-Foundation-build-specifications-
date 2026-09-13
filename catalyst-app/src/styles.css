@@ -1,0 +1,46 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #f3f4f6; color: #111827; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+.shell { max-width: 1180px; margin: 0 auto; padding: 28px 18px 56px; }
+.topbar { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; margin-bottom: 22px; }
+.eyebrow { margin: 0 0 5px; font-size: 12px; font-weight: 800; letter-spacing: .14em; }
+h1 { margin: 0; font-size: clamp(28px, 5vw, 44px); letter-spacing: -.04em; }
+h2 { margin: 0; font-size: 19px; }
+p { margin: 5px 0 0; }
+.muted, small { color: #6b7280; }
+.badge, .chips span { display: inline-flex; align-items: center; border: 1px solid #d1d5db; background: white; border-radius: 999px; padding: 8px 12px; font-size: 12px; font-weight: 700; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+.panel { background: white; border: 1px solid #e5e7eb; border-radius: 18px; padding: 20px; box-shadow: 0 8px 30px rgba(17,24,39,.05); margin-bottom: 18px; }
+.panel-title { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 20px; }
+.panel-title > span { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 9px; background: #111827; color: white; font-weight: 800; }
+label { display: block; font-size: 12px; font-weight: 800; margin: 15px 0 7px; }
+input, select, textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 10px; padding: 11px 12px; background: white; color: #111827; }
+textarea { resize: vertical; }
+.segmented { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.segmented button, .actions button, .footer-actions button { border: 1px solid #d1d5db; background: white; border-radius: 10px; padding: 10px 12px; font-weight: 700; }
+.segmented .active { background: #111827; color: white; border-color: #111827; }
+.primary { width: 100%; margin-top: 18px; border: 0; border-radius: 11px; padding: 12px 14px; background: #111827; color: white; font-weight: 800; }
+.primary:disabled, button:disabled { opacity: .45; cursor: not-allowed; }
+.notice { margin-bottom: 18px; border: 1px solid #bfdbfe; background: #eff6ff; color: #1e40af; border-radius: 12px; padding: 12px 14px; }
+.empty { border: 1px dashed #d1d5db; border-radius: 12px; padding: 30px; color: #6b7280; text-align: center; }
+.chips { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 12px; }
+.chips span { padding: 5px 9px; }
+.actions { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 8px; margin-top: 16px; }
+.pipeline { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 18px; }
+.stage { border: 1px solid #e5e7eb; border-radius: 10px; padding: 11px 7px; text-align: center; font-size: 11px; font-weight: 800; color: #6b7280; }
+.stage.active { background: #111827; color: white; border-color: #111827; }
+.job-list { display: grid; gap: 8px; }
+.job { display: flex; justify-content: space-between; gap: 15px; text-align: left; border: 1px solid #e5e7eb; background: white; border-radius: 12px; padding: 12px; }
+.job span { color: #6b7280; font-size: 12px; }
+.job.selected { border-color: #111827; }
+.footer-actions { margin-top: 16px; display: flex; justify-content: space-between; align-items: center; color: #6b7280; font-size: 12px; }
+.danger { color: #991b1b; }
+.provider-panel { display: flex; justify-content: space-between; gap: 20px; }
+.provider-grid { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 8px; flex: 1; }
+.provider-grid > div { border: 1px solid #e5e7eb; border-radius: 12px; padding: 11px; display: grid; gap: 4px; }
+.provider-grid b { font-size: 11px; }
+.provider-grid span { font-size: 13px; font-weight: 700; }
+.provider-grid em { font-size: 11px; color: #6b7280; font-style: normal; }
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } .topbar, .provider-panel { flex-direction: column; } .pipeline { grid-template-columns: repeat(3, 1fr); } .provider-grid { width: 100%; grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .shell { padding: 18px 12px 40px; } .actions { grid-template-columns: 1fr; } .pipeline { grid-template-columns: repeat(2, 1fr); } .job { flex-direction: column; } }
